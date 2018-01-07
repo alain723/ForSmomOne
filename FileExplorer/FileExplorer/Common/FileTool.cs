@@ -9,12 +9,15 @@ namespace FileExplorer.Common
 {
     public class FileTool
     {
-        public List<FileInfo> GetFileByDicPath(string path)
-        {
-            DirectoryInfo dic = new DirectoryInfo(path);
-            
-            return dic.GetFiles().ToList();
-        }
+        public DirectoryInfo mainDir { get; set; }
 
+        public FileTool(string dirName)
+        {
+            if (!Directory.Exists(dirName))
+            {
+                mainDir = Directory.CreateDirectory(dirName);
+            }
+            mainDir = new DirectoryInfo(dirName);
+        }
     }
 }
