@@ -29,3 +29,5 @@ E:\Git\GitHub\ForSmomOne\FileExplorer\FileExplorer\obj\Debug\FileExplorer.exe
 E:\Git\GitHub\ForSmomOne\FileExplorer\FileExplorer\obj\Debug\FileExplorer.pdb
 E:\Git\GitHub\ForSmomOne\FileExplorer\FileExplorer\bin\Debug\App_Data\mapping.xml
 E:\Git\GitHub\ForSmomOne\FileExplorer\FileExplorer\obj\Debug\FileExplorer.UpForm.resources
+E:\Git\Github\ForSmomOne\FileExplorer\FileExplorer\bin\Debug\log4net.dll
+E:\Git\Github\ForSmomOne\FileExplorer\FileExplorer\bin\Debug\log4net.xml

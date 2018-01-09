@@ -1,0 +1,42 @@
+
+ 
+记录时间：2018-01-09 22:06:51,173 
+线程ID:[1] 
+日志级别：  ERROR 
+出错类：FileExplorer.UpForm property: [(null)] - 
+错误描述：Error
+ 
+System.ComponentModel.Win32Exception (0x80004005): 系统找不到指定的文件。
+   在 System.Diagnostics.Process.StartWithShellExecuteEx(ProcessStartInfo startInfo)
+   在 System.Diagnostics.Process.Start()
+   在 System.Diagnostics.Process.Start(ProcessStartInfo startInfo)
+   在 System.Diagnostics.Process.Start(String fileName)
+   在 FileExplorer.UpForm.listView1_MouseDoubleClick(Object sender, MouseEventArgs e) 位置 E:\Git\Github\ForSmomOne\FileExplorer\FileExplorer\UpForm.cs:行号 80
+
+ 
+记录时间：2018-01-09 22:08:27,038 
+线程ID:[1] 
+日志级别：  ERROR 
+出错类：FileExplorer.UpForm property: [(null)] - 
+错误描述：Error
+ 
+System.ComponentModel.Win32Exception (0x80004005): 系统找不到指定的文件。
+   在 System.Diagnostics.Process.StartWithShellExecuteEx(ProcessStartInfo startInfo)
+   在 System.Diagnostics.Process.Start()
+   在 System.Diagnostics.Process.Start(ProcessStartInfo startInfo)
+   在 System.Diagnostics.Process.Start(String fileName)
+   在 FileExplorer.UpForm.listView1_MouseDoubleClick(Object sender, MouseEventArgs e) 位置 E:\Git\Github\ForSmomOne\FileExplorer\FileExplorer\UpForm.cs:行号 80
+
+ 
+记录时间：2018-01-09 22:10:41,860 
+线程ID:[1] 
+日志级别：  ERROR 
+出错类：FileExplorer.UpForm property: [(null)] - 
+错误描述：Error
+ 
+System.ComponentModel.Win32Exception (0x80004005): 系统找不到指定的文件。
+   在 System.Diagnostics.Process.StartWithShellExecuteEx(ProcessStartInfo startInfo)
+   在 System.Diagnostics.Process.Start()
+   在 System.Diagnostics.Process.Start(ProcessStartInfo startInfo)
+   在 System.Diagnostics.Process.Start(String fileName)
+   在 FileExplorer.UpForm.listView1_MouseDoubleClick(Object sender, MouseEventArgs e) 位置 E:\Git\Github\ForSmomOne\FileExplorer\FileExplorer\UpForm.cs:行号 80
