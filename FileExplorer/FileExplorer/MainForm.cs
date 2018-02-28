@@ -11,58 +11,122 @@ using MetroFramework;
 using MetroFramework.Forms;
 using FileExplorer.Common;
 using System.Xml.Linq;
+using FileExplorer.Model;
+using FileExplorer.Enum;
 
 namespace FileExplorer
 {
     public partial class MainForm : MetroForm
     {
-
         private FileTool fileTool;
+        private List<UpFileModel> fileList;
         private XmlTool xmlTool;
         private XDocument xDoc;
-        public string MainPath => System.AppDomain.CurrentDomain.BaseDirectory;
+        private string XPath = System.AppDomain.CurrentDomain.BaseDirectory + "App_Data/mapping.xml";
         public MainForm()
         {
             InitializeComponent();
             metroStyleManager.Theme = MetroThemeStyle.Dark;
             metroStyleManager.Style = MetroColorStyle.Teal;
-           
-           
-            xmlTool = new XmlTool(MainPath + "App_Data/mapping.xml");
+            fileTool = new FileTool();
+            xmlTool = new XmlTool(XPath);
 
-            xDoc= xmlTool.xDocument;
+            xDoc = xmlTool.xDocument;
 
-            fileTool = new FileTool(xDoc.Element("root")?.Element("mainPath").Value.Trim());
-            
         }
 
         private void MainForm_Load(object sender, EventArgs e)
         {
 
-            
-            foreach (var item in fileTool.mainDir.GetDirectories())
+            BindData();
+
+        }
+
+        private void BindData()
+        {
+            this.listView1.Items.Clear();
+            this.listView1.BeginUpdate();
+
+            foreach (var item in xDoc.Element("root").Elements("fileGroup").OrderByDescending(x => Convert.ToDateTime(x.Attribute("date").Value)))
             {
-                Console.WriteLine(item.Name);
+                if (item.HasElements)
+                {
+                    ListViewGroup lvg = new ListViewGroup();
+                    lvg.Header = item.Attribute("date").Value;
+                    foreach (var item1 in item.Elements("file"))
+                    {
+                        UpFileModel uf = new UpFileModel
+                        {
+                            FilePath = item1.Element("filePath").Value,
+                            FileName = item1.Element("fileName").Value,
+                            FileType =(FileType)Convert.ToInt32(item1.Element("fileType").Value),
+                            Date= Convert.ToDateTime(item1.Element("date").Value)
+                        };
+                        ListViewItem listItem = new ListViewItem();
+                        listItem.Text = uf.FileName;
+                        listItem.ImageIndex = Convert.ToInt32(uf.FileType);
+                        listItem.Tag = uf;
+                        listItem.Group = lvg;
+                        listView1.Items.Add(listItem);
+
+                    }
+                    this.listView1.Groups.Add(lvg);
+                }
+
             }
-
-            //ListViewGroup lvg = new ListViewGroup();
-            //lvg.Header = DateTime.Now.Date.ToString();
-            //foreach (var item in data)
-            //{
-
-            //    ListViewItem lvi = new ListViewItem();
-            //    lvi.Text= item.Name.Substring(0, item.Name.LastIndexOf('.'));
-            //    lvg.Items.Add(lvi);
-            //    this.listView1.Items.Add(lvi);
-
-            //}
-            //this.listView1.Groups.Add(lvg);
+            this.listView1.Refresh();
+            this.listView1.Show();
+            this.listView1.EndUpdate();
         }
 
         private void btnUpload_Click(object sender, EventArgs e)
         {
-           UpForm upForm=new UpForm();
-            upForm.ShowDialog();
+            UpForm upForm = new UpForm();
+            if (upForm.ShowDialog()==DialogResult.OK)
+            {
+                BindData();
+            }
+            
+
+        }
+
+        private void MainForm_Activated(object sender, EventArgs e)
+        {
+            //MainForm_Load(sender, e);
+        }
+
+        private void listView1_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+            ListViewHitTestInfo info = listView1.HitTest(e.X, e.Y);
+            if (info.Item != null)
+            {
+                try
+                {
+                    UpFileModel fileModel = (info.Item.Tag) as UpFileModel;
+                    LogHelper.WriteLog(this.GetType(), "双击打开文件---" + fileModel.FilePath);
+                    System.Diagnostics.Process.Start(fileModel.FilePath);
+                }
+                catch (Exception ex)
+                {
+                    LogHelper.WriteLog(this.GetType(), ex);
+                    MetroFramework.MetroMessageBox.Show(this, "这个东西我不认识~~", "哎呀");
+                }
+
+            }
+        }
+
+        private void listView1_MouseClick(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Right)
+            {
+                m_MBRpt = e.Location;
+                this.contextMenuStrip1.Show(listView1, e.Location);
+            }
+        }
+        Point m_MBRpt;
+
+        private void delTsm_Click(object sender, EventArgs e)
+        {
 
         }
     }

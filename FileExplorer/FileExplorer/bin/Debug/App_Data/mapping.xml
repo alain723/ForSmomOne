@@ -1,7 +1,24 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <root>
   <mainPath>Files</mainPath>
-  <fileGroup data="2018-1-8">
-    
+  <fileGroup date="2018-02-28">
+    <file>
+      <fileName>project-management-professional-pmp</fileName>
+      <filePath>G:\Desktop\project-management-professional-pmp.png</filePath>
+      <fileType>2</fileType>
+      <date>2018-02-28</date>
+    </file>
+    <file>
+      <fileName>QQ图片20170327171502</fileName>
+      <filePath>G:\Desktop\QQ图片20170327171502.png</filePath>
+      <fileType>2</fileType>
+      <date>2018-02-28</date>
+    </file>
+    <file>
+      <fileName>大二班徽</fileName>
+      <filePath>G:\Desktop\大二班徽.png</filePath>
+      <fileType>2</fileType>
+      <date>2018-02-28</date>
+    </file>
   </fileGroup>
 </root>
