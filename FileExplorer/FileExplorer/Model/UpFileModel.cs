@@ -9,6 +9,7 @@ namespace FileExplorer.Model
 {
     public class UpFileModel
     {
+        public Guid Id { get; set; }
         /// <summary>
         /// 文件路径
         /// </summary>
@@ -23,6 +24,10 @@ namespace FileExplorer.Model
         public FileType FileType { get; set; }
 
         public DateTime Date { get; set; }
+
+        public string Group { get; set; }
+
+        public string ExtName { get; set; }
 
     }
 }

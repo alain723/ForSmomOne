@@ -9,13 +9,14 @@ using FileExplorer.Model;
 using FileExplorer.Common;
 using System.Xml.Linq;
 using System.Drawing;
+using System.IO;
 
 namespace FileExplorer
 {
     public partial class UpForm : MetroForm
     {
         private FileTool fileTool;
-        private List<UpFileModel> fileList;
+        //private List<UpFileModel> fileList;
         private XmlTool xmlTool;
         private XDocument xDoc;
         private string XPath = System.AppDomain.CurrentDomain.BaseDirectory + "App_Data/mapping.xml";
@@ -29,48 +30,43 @@ namespace FileExplorer
             xmlTool = new XmlTool(XPath);
 
             xDoc = xmlTool.xDocument;
+            this.listView1.ShowItemToolTips = true;
         }
 
         private void btnCancel_Click(object sender, EventArgs e)
         {
-            this.Close();
-            this.Dispose();
+            this.DialogResult = System.Windows.Forms.DialogResult.Cancel;
         }
 
         private void btnOk_Click(object sender, EventArgs e)
         {
             if (this.listView1.Items.Count <= 0)
             {
-                MetroFramework.MetroMessageBox.Show(this, "这里面没东西，不要瞎点~~", "哎呀");
+                MetroFramework.MetroMessageBox.Show(this, "还没有选择任何文件", "警告");
                 return;
             }
 
-            var xmlBase = xDoc.Element("root").Elements("fileGroup").SingleOrDefault(x => x.Attribute("date").Value == this.dateTimePicker1.Value.ToString("yyyy-MM-dd"));
-            if (xmlBase == null)
-            {
-                XElement xe = new XElement("fileGroup", new XAttribute("date", this.dateTimePicker1.Value.ToString("yyyy-MM-dd")));
-                xmlBase = xe;
-                xDoc.Element("root").Add(xe);
-
-            }
-            //MetroFramework.MetroMessageBox.Show(this, xmlBase.ToString(), "哎呀");
+            var xmlBase = xDoc.Element("root");
             foreach (ListViewItem item in this.listView1.Items)
             {
-               
+
                 UpFileModel uf = item.Tag as UpFileModel;
-                if (xmlBase.Elements("file").Any(x=>x.Element("filePath").Value==uf.FilePath))
+                if (xmlBase.Elements("file").Any(x => x.Element("filePath").Value == uf.FilePath))
                 {
                     continue;
                 }
                 xmlBase.Add(new XElement("file",
+                    new XElement("id", uf.Id),
                     new XElement("fileName", uf.FileName),
                     new XElement("filePath", uf.FilePath),
                     new XElement("fileType", Convert.ToInt32(uf.FileType)),
-                    new XElement("date", uf.Date.ToString("yyyy-MM-dd"))
+                    new XElement("date", uf.Date.ToString("yyyy-MM-dd")),
+                    new XElement("group", uf.Group),
+                    new XElement("extName", uf.ExtName)
                     ));
             }
             xDoc.Save(XPath);
-            MetroFramework.MetroMessageBox.Show(this, "成功了！", "恭喜");
+            MetroFramework.MetroMessageBox.Show(this, "上传成功！", "消息");
             this.DialogResult = System.Windows.Forms.DialogResult.OK;
         }
 
@@ -84,37 +80,41 @@ namespace FileExplorer
 
         private void openFileDialog1_FileOk(object sender, CancelEventArgs e)
         {
-            fileList = fileList ?? new List<UpFileModel>();
-
-            foreach (var item in this.openFileDialog1.FileNames)
-            {
-                if (!fileList.Any(x => x.FilePath == item))
-                {
-                    fileList.Add(fileTool?.GetFileInfo(item));
-                    LogHelper.WriteLog(this.GetType(), "选择文件---" + item);
-                }
-                else
-                {
-                    LogHelper.WriteLog(this.GetType(), "重复选择文件---" + item);
-                }
-
-
-            }
+            //更新viewlist
             this.listView1.Items.Clear();
             this.listView1.BeginUpdate();
-            foreach (var item in fileList)
+            //这个地方开始备份文件
+            var mainPath = xDoc.Element("root").Element("mainPath").Value;
+            if (fileTool.ValMainPath(mainPath))
             {
-                item.Date = this.dateTimePicker1.Value;
-                ListViewItem listItem = new ListViewItem();
-                listItem.Text = item.FileName;
-                listItem.ImageIndex = Convert.ToInt32(item.FileType);
-                listItem.Tag = item;
-                listView1.Items.Add(listItem);
+                foreach (var item in this.openFileDialog1.FileNames)
+                {
+                    FileInfo fi0 = new FileInfo(item);
+                    Guid id = Guid.NewGuid();
+                    FileInfo fi = fileTool.CopyAndSave(item, mainPath + "/" + id.ToString() + fi0.Extension);
+                    UpFileModel model = new UpFileModel
+                    {
+                        Id = id,
+                        FileName = fi0.Name.Split('.')[0],
+                        FilePath = fi.FullName,
+                        FileType = FileTool.GetFileType(fi.Extension),
+                        Date = this.dateTimePicker1.Value,
+                        Group = "",
+                        ExtName = fi.Extension
+                    };
+                    model.Date = this.dateTimePicker1.Value;
+                    ListViewItem listItem = new ListViewItem();
+                    listItem.Text = model.FileName;
+                    listItem.ImageIndex = Convert.ToInt32(model.FileType);
+                    listItem.Tag = model;
+                    listItem.ToolTipText = "文件类型："+model.FileType.ToString()+"\r\n上传时间：" + model.Date.ToString("yyyy-MM-dd") + "\r\n组别：" + model.Group;
+                    listView1.Items.Add(listItem);
+                }
             }
             listView1.Show();
             this.listView1.EndUpdate();
 
-           
+
         }
 
         private void listView1_MouseDoubleClick(object sender, MouseEventArgs e)
@@ -131,7 +131,7 @@ namespace FileExplorer
                 catch (Exception ex)
                 {
                     LogHelper.WriteLog(this.GetType(), ex);
-                    MetroFramework.MetroMessageBox.Show(this, "这个东西我不认识~~", "哎呀");
+                    MetroFramework.MetroMessageBox.Show(this, "没有可以打开该文件的应用程序", "警告");
                 }
 
             }
@@ -139,13 +139,18 @@ namespace FileExplorer
 
         private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
         {
-            LogHelper.WriteLog(this.GetType(), "选择了时间---" + this.dateTimePicker1.Value);
-            if (fileList != null)
+            if (this.listView1.Items.Count > 0 && this.listView1.SelectedItems.Count == 0)
             {
-                foreach (var item in fileList)
-                {
-                    item.Date = this.dateTimePicker1.Value;
-                }
+                MetroFramework.MetroMessageBox.Show(this, "请至少选择一个文件", "警告");
+                return;
+            }
+            LogHelper.WriteLog(this.GetType(), "选择了时间---" + this.dateTimePicker1.Value);
+            foreach (ListViewItem item in this.listView1.SelectedItems)
+            {
+                ListViewItem lvi = item;
+                UpFileModel ufm = lvi.Tag as UpFileModel;
+                ufm.Date = this.dateTimePicker1.Value;
+                lvi.Tag = ufm;
             }
 
         }
@@ -154,18 +159,30 @@ namespace FileExplorer
         {
             if (e.Button == MouseButtons.Right)
             {
+                
                 m_MBRpt = e.Location;
-                this.contextMenuStrip1.Show(listView1, e.Location);
+                this.contextMenuStrip1.Show(listView1,e.Location);
             }
         }
         Point m_MBRpt;
         private void delTsm_Click(object sender, EventArgs e)
         {
-            ListViewItem lstrow = listView1.GetItemAt(m_MBRpt.X, m_MBRpt.Y);
-            //MetroFramework.MetroMessageBox.Show(this, (lstrow.Tag as UpFileModel).FilePath, "哎呀");
-            UpFileModel ufm = lstrow.Tag as UpFileModel;
-            this.listView1.Items.Remove(lstrow);
-            fileList.Remove(ufm);
+            foreach (ListViewItem item in this.listView1.SelectedItems)
+            {
+                //MetroFramework.MetroMessageBox.Show(this, (lstrow.Tag as UpFileModel).FilePath, "哎呀");
+                UpFileModel ufm = item.Tag as UpFileModel;
+                this.listView1.Items.Remove(item);
+                //fileList.Remove(ufm);
+            }
+
+        }
+
+        private void listView1_AfterLabelEdit(object sender, LabelEditEventArgs e)
+        {
+            ListViewItem lvi = this.listView1.Items[e.Item];
+            UpFileModel ufm = lvi.Tag as UpFileModel;
+            ufm.FileName = e.Label;
+            lvi.Tag = ufm;
         }
     }
 }

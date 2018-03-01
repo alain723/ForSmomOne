@@ -64,7 +64,7 @@ namespace FileExplorer
             this.metroPanel1.HorizontalScrollbarSize = 10;
             this.metroPanel1.Location = new System.Drawing.Point(23, 63);
             this.metroPanel1.Name = "metroPanel1";
-            this.metroPanel1.Size = new System.Drawing.Size(689, 314);
+            this.metroPanel1.Size = new System.Drawing.Size(689, 337);
             this.metroPanel1.TabIndex = 0;
             this.metroPanel1.VerticalScrollbarBarColor = true;
             this.metroPanel1.VerticalScrollbarHighlightOnWheel = false;
@@ -72,9 +72,9 @@ namespace FileExplorer
             // 
             // dateTimePicker1
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(460, 105);
+            this.dateTimePicker1.Location = new System.Drawing.Point(93, 7);
             this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(200, 21);
+            this.dateTimePicker1.Size = new System.Drawing.Size(125, 21);
             this.dateTimePicker1.TabIndex = 6;
             this.dateTimePicker1.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
             // 
@@ -83,21 +83,23 @@ namespace FileExplorer
             this.metroLabel1.AutoSize = true;
             this.metroLabel1.FontSize = MetroFramework.MetroLabelSize.Tall;
             this.metroLabel1.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.metroLabel1.Location = new System.Drawing.Point(460, 77);
+            this.metroLabel1.Location = new System.Drawing.Point(3, 4);
             this.metroLabel1.Name = "metroLabel1";
-            this.metroLabel1.Size = new System.Drawing.Size(102, 25);
+            this.metroLabel1.Size = new System.Drawing.Size(84, 25);
             this.metroLabel1.TabIndex = 5;
-            this.metroLabel1.Text = "选个好日子";
+            this.metroLabel1.Text = "存储日期";
             this.metroLabel1.Theme = MetroFramework.MetroThemeStyle.Light;
             // 
             // listView1
             // 
+            this.listView1.LabelEdit = true;
             this.listView1.LargeImageList = this.imageList1;
-            this.listView1.Location = new System.Drawing.Point(3, 4);
+            this.listView1.Location = new System.Drawing.Point(3, 34);
             this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(445, 308);
+            this.listView1.Size = new System.Drawing.Size(683, 303);
             this.listView1.TabIndex = 3;
             this.listView1.UseCompatibleStateImageBehavior = false;
+            this.listView1.AfterLabelEdit += new System.Windows.Forms.LabelEditEventHandler(this.listView1_AfterLabelEdit);
             this.listView1.MouseClick += new System.Windows.Forms.MouseEventHandler(this.listView1_MouseClick);
             this.listView1.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.listView1_MouseDoubleClick);
             // 
@@ -114,11 +116,11 @@ namespace FileExplorer
             // btnSelFile
             // 
             this.btnSelFile.FontSize = MetroFramework.MetroButtonSize.Tall;
-            this.btnSelFile.Location = new System.Drawing.Point(460, 16);
+            this.btnSelFile.Location = new System.Drawing.Point(571, 4);
             this.btnSelFile.Name = "btnSelFile";
-            this.btnSelFile.Size = new System.Drawing.Size(115, 49);
+            this.btnSelFile.Size = new System.Drawing.Size(115, 25);
             this.btnSelFile.TabIndex = 2;
-            this.btnSelFile.Text = "选一些文件...";
+            this.btnSelFile.Text = "选取文件...";
             this.btnSelFile.Theme = MetroFramework.MetroThemeStyle.Dark;
             this.btnSelFile.UseSelectable = true;
             this.btnSelFile.Click += new System.EventHandler(this.btnSelFile_Click);
@@ -126,11 +128,11 @@ namespace FileExplorer
             // btnCancel
             // 
             this.btnCancel.FontSize = MetroFramework.MetroButtonSize.Tall;
-            this.btnCancel.Location = new System.Drawing.Point(422, 392);
+            this.btnCancel.Location = new System.Drawing.Point(507, 406);
             this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(88, 36);
+            this.btnCancel.Size = new System.Drawing.Size(88, 23);
             this.btnCancel.TabIndex = 1;
-            this.btnCancel.Text = "再见";
+            this.btnCancel.Text = "取消";
             this.btnCancel.Theme = MetroFramework.MetroThemeStyle.Light;
             this.btnCancel.UseSelectable = true;
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
@@ -138,9 +140,9 @@ namespace FileExplorer
             // btnOk
             // 
             this.btnOk.FontSize = MetroFramework.MetroButtonSize.Tall;
-            this.btnOk.Location = new System.Drawing.Point(533, 391);
+            this.btnOk.Location = new System.Drawing.Point(617, 406);
             this.btnOk.Name = "btnOk";
-            this.btnOk.Size = new System.Drawing.Size(95, 36);
+            this.btnOk.Size = new System.Drawing.Size(95, 22);
             this.btnOk.TabIndex = 1;
             this.btnOk.Text = "好";
             this.btnOk.Theme = MetroFramework.MetroThemeStyle.Light;
@@ -157,13 +159,13 @@ namespace FileExplorer
             this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.delTsm});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(113, 26);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(101, 26);
             // 
             // delTsm
             // 
             this.delTsm.Name = "delTsm";
-            this.delTsm.Size = new System.Drawing.Size(112, 22);
-            this.delTsm.Text = "删了！";
+            this.delTsm.Size = new System.Drawing.Size(100, 22);
+            this.delTsm.Text = "删除";
             this.delTsm.Click += new System.EventHandler(this.delTsm_Click);
             // 
             // UpForm

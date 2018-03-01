@@ -113,12 +113,13 @@
   <ItemGroup>
     <Content Include="App_Data\mapping.xml">
       <SubType>Designer</SubType>
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="FileExplorer.ico">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Resources\pdf.png" />
+    <Content Include="Resources\settings.png" />
     <Content Include="Resources\word.png" />
     <Content Include="Resources\excel.png" />
     <Content Include="Resources\blank.png" />

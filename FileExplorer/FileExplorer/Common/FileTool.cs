@@ -34,7 +34,32 @@ namespace FileExplorer.Common
             };
         }
 
-        private static FileType GetFileType(string fileName)
+        public bool ValMainPath(string mainPath)
+        {
+            try
+            {
+                if (Directory.Exists(mainPath))
+                {
+                    return true;
+                }
+                else
+                {
+                    return Directory.CreateDirectory(mainPath) != null;
+                }
+            }
+            catch (Exception e)
+            {
+                LogHelper.WriteLog(this.GetType(), "创建文件夹失败：\r\n" + e.Message + e.StackTrace);
+            }
+            return false;
+        }
+        public FileInfo CopyAndSave(string from, string to)
+        {
+            FileInfo fi = new FileInfo(from);
+            return fi.CopyTo(to);
+        }
+
+        public static FileType GetFileType(string fileName)
         {
             //"图片|*.jgp;*.png;*.jpeg;*.bmp;*.gif|pdf文件|*.pdf|Word|*.doc;*.docx|Excel|*.xls;*.xlsx|所有文件(*.*)|*.*";
             switch (fileName)

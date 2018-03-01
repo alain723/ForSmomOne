@@ -1,7 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <root>
-  <mainPath>Files</mainPath>
-  <fileGroup date="2018-01-8">
-    
-  </fileGroup>
+  <mainPath>D:\backlog</mainPath>
+  <groups>
+    <item>11</item>
+    <item>22</item>
+    </groups>
 </root>

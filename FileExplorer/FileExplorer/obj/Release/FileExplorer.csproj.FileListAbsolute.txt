@@ -12,3 +12,4 @@ E:\Git\GitHub\ForSmomOne1\FileExplorer\FileExplorer\bin\Release\log4net.xml
 E:\Git\GitHub\ForSmomOne1\FileExplorer\FileExplorer\obj\Release\FileExplorer.exe
 E:\Git\GitHub\ForSmomOne1\FileExplorer\FileExplorer\obj\Release\FileExplorer.pdb
 E:\Git\GitHub\ForSmomOne1\FileExplorer\FileExplorer\bin\Release\FileExplorer.ico
+E:\Git\GitHub\ForSmomOne1\FileExplorer\FileExplorer\obj\Release\FileExplorer.csprojResolveAssemblyReference.cache
