@@ -1,0 +1,104 @@
+
+ 
+记录时间：2018-03-01 10:09:58,887 
+线程ID:[1] 
+日志级别：  ERROR 
+出错类：FileExplorer.UpForm property: [(null)] - 
+错误描述：选择文件---G:\Desktop\轮子logo白色无文字.png
+ 
+
+ 
+记录时间：2018-03-01 10:10:06,020 
+线程ID:[1] 
+日志级别：  ERROR 
+出错类：FileExplorer.UpForm property: [(null)] - 
+错误描述：选择文件---G:\Desktop\project-management-professional-pmp.png
+ 
+
+ 
+记录时间：2018-03-01 10:10:06,020 
+线程ID:[1] 
+日志级别：  ERROR 
+出错类：FileExplorer.UpForm property: [(null)] - 
+错误描述：选择文件---G:\Desktop\QQ图片20170327171502.png
+ 
+
+ 
+记录时间：2018-03-01 10:10:06,020 
+线程ID:[1] 
+日志级别：  ERROR 
+出错类：FileExplorer.UpForm property: [(null)] - 
+错误描述：选择文件---G:\Desktop\大二班徽.png
+ 
+
+ 
+记录时间：2018-03-01 10:10:06,021 
+线程ID:[1] 
+日志级别：  ERROR 
+出错类：FileExplorer.UpForm property: [(null)] - 
+错误描述：重复选择文件---G:\Desktop\轮子logo白色无文字.png
+ 
+
+ 
+记录时间：2018-03-01 10:10:06,021 
+线程ID:[1] 
+日志级别：  ERROR 
+出错类：FileExplorer.UpForm property: [(null)] - 
+错误描述：选择文件---G:\Desktop\未标题-1.png
+ 
+
+ 
+记录时间：2018-03-01 10:10:06,022 
+线程ID:[1] 
+日志级别：  ERROR 
+出错类：FileExplorer.UpForm property: [(null)] - 
+错误描述：选择文件---G:\Desktop\项目管理部logo无背景.png
+ 
+
+ 
+记录时间：2018-03-01 10:12:01,683 
+线程ID:[1] 
+日志级别：  ERROR 
+出错类：FileExplorer.UpForm property: [(null)] - 
+错误描述：选择文件---G:\Desktop\project-management-professional-pmp.png
+ 
+
+ 
+记录时间：2018-03-01 10:12:05,147 
+线程ID:[1] 
+日志级别：  ERROR 
+出错类：FileExplorer.UpForm property: [(null)] - 
+错误描述：选择了时间---2018/3/2 10:11:51
+ 
+
+ 
+记录时间：2018-03-01 10:12:08,517 
+线程ID:[1] 
+日志级别：  ERROR 
+出错类：FileExplorer.UpForm property: [(null)] - 
+错误描述：选择了时间---2018/2/26 10:11:51
+ 
+
+ 
+记录时间：2018-03-01 10:14:31,386 
+线程ID:[1] 
+日志级别：  ERROR 
+出错类：FileExplorer.UpForm property: [(null)] - 
+错误描述：选择文件---G:\Desktop\轮子logo白色无文字.png
+ 
+
+ 
+记录时间：2018-03-01 10:14:59,963 
+线程ID:[1] 
+日志级别：  ERROR 
+出错类：FileExplorer.MainForm property: [(null)] - 
+错误描述：双击打开文件---G:\Desktop\大二班徽.png
+ 
+
+ 
+记录时间：2018-03-01 10:15:03,698 
+线程ID:[1] 
+日志级别：  ERROR 
+出错类：FileExplorer.MainForm property: [(null)] - 
+错误描述：双击打开文件---G:\Desktop\project-management-professional-pmp.png
+ 

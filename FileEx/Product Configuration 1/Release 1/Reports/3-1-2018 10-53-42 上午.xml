@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="D:\Support\0409\buildreport.xsl"?>
+<BuildReport ProductName="FileEx" ProductVersion="1.00.0000" Built="3-1-2018 10-53-42 上午" Config="Product Configuration 1" Media="Release 1" Uncompressed="0.00 MB">
+  <Features>
+    <Feature Title="##ID_STRING1##">App_Data</Feature>
+  </Features>
+  <Components>
+    <Component x64="32">AllOtherFiles</Component>
+    <Component x64="32">AllOtherFiles1</Component>
+    <Component x64="32">AllOtherFiles2</Component>
+    <Component x64="32" KeyPath="fileexplorer.exe">FileExplorer.exe</Component>
+    <Component x64="32" KeyPath="metroframework.design.dll">MetroFramework.Design.dll</Component>
+    <Component x64="32" KeyPath="metroframework.fonts.dll">MetroFramework.Fonts.dll</Component>
+    <Component x64="32" KeyPath="metroframework.dll">MetroFramework.dll</Component>
+    <Component x64="32" KeyPath="log4net.dll">log4net.dll</Component>
+  </Components>
+  <Prerequisites>
+    <Prerequisite>Microsoft .NET Framework 4.6.1 Full</Prerequisite>
+  </Prerequisites>
+  <MergeModules />
+  <DynamicLinks>
+    <DynamicLink Include="" Exclude="">&lt;PATH_TO_LOG_FILES&gt;</DynamicLink>
+    <DynamicLink Include="" Exclude="">&lt;PATH_TO_APP_DATA_FILES&gt;</DynamicLink>
+  </DynamicLinks>
+  <Files>
+    <File Destination="{INSTALLDIR} [ProgramFilesFolder]Alain\FileEx" Component="MetroFramework.Fonts.dll" Modified="2018/1/16 11:40:56" Size="672256" Version="1.3.0.0">MetroFramework.Fonts.dll</File>
+    <File Destination="{INSTALLDIR} [ProgramFilesFolder]Alain\FileEx" Component="MetroFramework.dll" Modified="2018/1/16 11:40:56" Size="338432" Version="1.3.0.0">MetroFramework.dll</File>
+    <File Destination="{INSTALLDIR} [ProgramFilesFolder]Alain\FileEx" Component="MetroFramework.Design.dll" Modified="2018/1/16 11:40:56" Size="17408" Version="1.3.0.0">MetroFramework.Design.dll</File>
+    <File Destination="{INSTALLDIR} [ProgramFilesFolder]Alain\FileEx" Component="log4net.dll" Modified="2017/3/8 19:26:22" Size="276480" Version="2.0.8.0">log4net.dll</File>
+    <File Destination="{INSTALLDIR} [ProgramFilesFolder]Alain\FileEx" Component="AllOtherFiles2" Modified="2017/3/8 19:26:22" Size="1547797" Version="">log4net.xml</File>
+    <File Destination="{INSTALLDIR} [ProgramFilesFolder]Alain\FileEx" Component="AllOtherFiles2" Modified="2018/3/1 10:45:35" Size="46592" Version="">FileExplorer.pdb</File>
+    <File Destination="{INSTALLDIR} [ProgramFilesFolder]Alain\FileEx" Component="AllOtherFiles2" Modified="2018/1/16 11:40:56" Size="1382" Version="">FileExplorer.exe.config</File>
+    <File Destination="{INSTALLDIR} [ProgramFilesFolder]Alain\FileEx" Component="FileExplorer.exe" Modified="2018/3/1 10:45:35" Size="214016" Version="1.0.0.0">FileExplorer.exe</File>
+    <File Destination="{APP_DATA} [ProgramFilesFolder]Alain\FileEx\App_Data" Component="AllOtherFiles" Modified="2018/2/28 14:00:46" Size="145" Version="">mapping.xml</File>
+  </Files>
+</BuildReport>

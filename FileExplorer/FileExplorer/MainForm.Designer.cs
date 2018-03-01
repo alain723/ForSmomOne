@@ -37,9 +37,9 @@ namespace FileExplorer
             this.metroPanel1 = new MetroFramework.Controls.MetroPanel();
             this.btnUpload = new MetroFramework.Controls.MetroButton();
             this.listView1 = new System.Windows.Forms.ListView();
-            this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.delTsm = new System.Windows.Forms.ToolStripMenuItem();
+            this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.metroStyleManager)).BeginInit();
             this.metroPanel1.SuspendLayout();
             this.contextMenuStrip1.SuspendLayout();
@@ -95,6 +95,20 @@ namespace FileExplorer
             this.listView1.MouseClick += new System.Windows.Forms.MouseEventHandler(this.listView1_MouseClick);
             this.listView1.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.listView1_MouseDoubleClick);
             // 
+            // contextMenuStrip1
+            // 
+            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.delTsm});
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(113, 26);
+            // 
+            // delTsm
+            // 
+            this.delTsm.Name = "delTsm";
+            this.delTsm.Size = new System.Drawing.Size(112, 22);
+            this.delTsm.Text = "删了！";
+            this.delTsm.Click += new System.EventHandler(this.delTsm_Click);
+            // 
             // imageList1
             // 
             this.imageList1.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageList1.ImageStream")));
@@ -104,20 +118,6 @@ namespace FileExplorer
             this.imageList1.Images.SetKeyName(2, "image.png");
             this.imageList1.Images.SetKeyName(3, "pdf.png");
             this.imageList1.Images.SetKeyName(4, "word.png");
-            // 
-            // contextMenuStrip1
-            // 
-            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.delTsm});
-            this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(153, 48);
-            // 
-            // delTsm
-            // 
-            this.delTsm.Name = "delTsm";
-            this.delTsm.Size = new System.Drawing.Size(152, 22);
-            this.delTsm.Text = "删了！";
-            this.delTsm.Click += new System.EventHandler(this.delTsm_Click);
             // 
             // MainForm
             // 
@@ -129,6 +129,7 @@ namespace FileExplorer
             this.BackMaxSize = 50;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.metroPanel1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MinimumSize = new System.Drawing.Size(800, 450);
             this.Name = "MainForm";
             this.Padding = new System.Windows.Forms.Padding(20, 60, 20, 18);

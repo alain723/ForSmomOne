@@ -48,3 +48,4 @@ E:\Git\GitHub\ForSmomOne1\FileExplorer\FileExplorer\bin\Debug\log4net.xml
 E:\Git\GitHub\ForSmomOne1\FileExplorer\FileExplorer\bin\Debug\MetroFramework.pdb
 E:\Git\GitHub\ForSmomOne1\FileExplorer\FileExplorer\bin\Debug\MetroFramework.Design.pdb
 E:\Git\GitHub\ForSmomOne1\FileExplorer\FileExplorer\bin\Debug\MetroFramework.Fonts.pdb
+E:\Git\GitHub\ForSmomOne1\FileExplorer\FileExplorer\bin\Debug\FileExplorer.ico

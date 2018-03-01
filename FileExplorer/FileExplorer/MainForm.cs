@@ -29,9 +29,7 @@ namespace FileExplorer
             metroStyleManager.Theme = MetroThemeStyle.Dark;
             metroStyleManager.Style = MetroColorStyle.Teal;
             fileTool = new FileTool();
-            xmlTool = new XmlTool(XPath);
 
-            xDoc = xmlTool.xDocument;
 
         }
 
@@ -44,6 +42,9 @@ namespace FileExplorer
 
         private void BindData()
         {
+            xmlTool = new XmlTool(XPath);
+
+            xDoc = xmlTool.xDocument;
             this.listView1.Items.Clear();
             this.listView1.BeginUpdate();
 
@@ -59,8 +60,8 @@ namespace FileExplorer
                         {
                             FilePath = item1.Element("filePath").Value,
                             FileName = item1.Element("fileName").Value,
-                            FileType =(FileType)Convert.ToInt32(item1.Element("fileType").Value),
-                            Date= Convert.ToDateTime(item1.Element("date").Value)
+                            FileType = (FileType)Convert.ToInt32(item1.Element("fileType").Value),
+                            Date = Convert.ToDateTime(item1.Element("date").Value)
                         };
                         ListViewItem listItem = new ListViewItem();
                         listItem.Text = uf.FileName;
@@ -82,11 +83,10 @@ namespace FileExplorer
         private void btnUpload_Click(object sender, EventArgs e)
         {
             UpForm upForm = new UpForm();
-            if (upForm.ShowDialog()==DialogResult.OK)
+            if (upForm.ShowDialog() == DialogResult.OK)
             {
                 BindData();
             }
-            
 
         }
 
@@ -127,7 +127,21 @@ namespace FileExplorer
 
         private void delTsm_Click(object sender, EventArgs e)
         {
+            this.listView1.BeginUpdate();
+            ListViewItem lstrow = listView1.GetItemAt(m_MBRpt.X, m_MBRpt.Y);
+            //MetroFramework.MetroMessageBox.Show(this, (lstrow.Tag as UpFileModel).FilePath, "哎呀");
+            UpFileModel ufm = lstrow.Tag as UpFileModel;
+            this.listView1.Items.Remove(lstrow);
 
+            xDoc.Element("root")
+                .Elements("fileGroup").Where(x => x.Attribute("date").Value == ufm.Date.ToString("yyyy-MM-dd"))
+                .Elements("filePath").Where(x => x.Element("filePath").Value == ufm.FilePath)
+                .Remove();
+            xDoc.Save(XPath);
+            LogHelper.WriteLog(this.GetType(), "删除文件---" + ufm.FilePath);
+            this.listView1.Refresh();
+            this.listView1.Show();
+            this.listView1.EndUpdate();
         }
     }
 }

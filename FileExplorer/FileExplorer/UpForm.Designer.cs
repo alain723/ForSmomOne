@@ -157,12 +157,12 @@ namespace FileExplorer
             this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.delTsm});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(153, 48);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(113, 26);
             // 
             // delTsm
             // 
             this.delTsm.Name = "delTsm";
-            this.delTsm.Size = new System.Drawing.Size(152, 22);
+            this.delTsm.Size = new System.Drawing.Size(112, 22);
             this.delTsm.Text = "删了！";
             this.delTsm.Click += new System.EventHandler(this.delTsm_Click);
             // 
@@ -174,6 +174,7 @@ namespace FileExplorer
             this.Controls.Add(this.btnOk);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.metroPanel1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MaximumSize = new System.Drawing.Size(736, 442);
             this.MinimizeBox = false;
