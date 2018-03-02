@@ -184,7 +184,7 @@ namespace FileExplorer
             this.Name = "UpForm";
             this.Resizable = false;
             this.Style = MetroFramework.MetroColorStyle.Default;
-            this.Text = "存";
+            this.Text = "存入";
             this.Theme = MetroFramework.MetroThemeStyle.Dark;
             ((System.ComponentModel.ISupportInitialize)(this.metroStyleManager)).EndInit();
             this.metroPanel1.ResumeLayout(false);

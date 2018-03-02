@@ -337,5 +337,11 @@ namespace FileExplorer
             this.rdbTime.Checked = true;
             BindData1(times, data);
         }
+
+        private void btnSetting_Click(object sender, EventArgs e)
+        {
+            LogHelper.WriteLog(this.GetType(), "设置");
+            new SettingsForm().ShowDialog();
+        }
     }
 }

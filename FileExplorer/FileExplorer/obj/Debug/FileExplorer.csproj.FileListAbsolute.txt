@@ -46,3 +46,4 @@ E:\Git\GitHub\ForSmomOne1\FileExplorer\FileExplorer\bin\Debug\log4net.dll
 E:\Git\GitHub\ForSmomOne1\FileExplorer\FileExplorer\bin\Debug\log4net.xml
 E:\Git\GitHub\ForSmomOne1\FileExplorer\FileExplorer\bin\Debug\FileExplorer.ico
 E:\Git\GitHub\ForSmomOne1\FileExplorer\FileExplorer\obj\Debug\FileExplorer.csprojResolveAssemblyReference.cache
+E:\Git\GitHub\ForSmomOne1\FileExplorer\FileExplorer\obj\Debug\FileExplorer.SettingsForm.resources

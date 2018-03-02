@@ -2,7 +2,7 @@
 <root>
   <mainPath>D:\backlog</mainPath>
   <groups>
-    <item>11</item>
+    <item default="true">11</item>
     <item>22</item>
   </groups>
   <file>
