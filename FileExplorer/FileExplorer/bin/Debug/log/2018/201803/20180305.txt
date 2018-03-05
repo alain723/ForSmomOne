@@ -1,0 +1,72 @@
+
+ 
+记录时间：2018-03-05 09:43:46,436 
+线程ID:[1] 
+日志级别：  ERROR 
+出错类：FileExplorer.MainForm property: [(null)] - 
+错误描述：设置
+ 
+
+ 
+记录时间：2018-03-05 09:44:08,054 
+线程ID:[1] 
+日志级别：  ERROR 
+出错类：FileExplorer.MainForm property: [(null)] - 
+错误描述：设置
+ 
+
+ 
+记录时间：2018-03-05 09:45:09,660 
+线程ID:[1] 
+日志级别：  ERROR 
+出错类：FileExplorer.MainForm property: [(null)] - 
+错误描述：设置
+ 
+
+ 
+记录时间：2018-03-05 09:52:09,822 
+线程ID:[1] 
+日志级别：  ERROR 
+出错类：FileExplorer.MainForm property: [(null)] - 
+错误描述：设置
+ 
+
+ 
+记录时间：2018-03-05 09:52:53,276 
+线程ID:[1] 
+日志级别：  ERROR 
+出错类：FileExplorer.MainForm property: [(null)] - 
+错误描述：设置
+ 
+
+ 
+记录时间：2018-03-05 10:29:51,099 
+线程ID:[1] 
+日志级别：  ERROR 
+出错类：FileExplorer.MainForm property: [(null)] - 
+错误描述：设置
+ 
+
+ 
+记录时间：2018-03-05 10:38:49,871 
+线程ID:[1] 
+日志级别：  ERROR 
+出错类：FileExplorer.MainForm property: [(null)] - 
+错误描述：设置
+ 
+
+ 
+记录时间：2018-03-05 10:39:56,017 
+线程ID:[1] 
+日志级别：  ERROR 
+出错类：FileExplorer.MainForm property: [(null)] - 
+错误描述：设置
+ 
+
+ 
+记录时间：2018-03-05 10:41:26,145 
+线程ID:[1] 
+日志级别：  ERROR 
+出错类：FileExplorer.MainForm property: [(null)] - 
+错误描述：设置
+ 

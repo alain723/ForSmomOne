@@ -34,16 +34,16 @@ namespace FileExplorer
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SettingsForm));
             this.metroStyleManager = new MetroFramework.Components.MetroStyleManager(this.components);
             this.metroPanel1 = new MetroFramework.Controls.MetroPanel();
+            this.metroLabel2 = new MetroFramework.Controls.MetroLabel();
+            this.btnAddList = new MetroFramework.Controls.MetroButton();
+            this.txtAdd = new MetroFramework.Controls.MetroTextBox();
+            this.listBox1 = new System.Windows.Forms.ListBox();
             this.btnSelDir = new MetroFramework.Controls.MetroButton();
             this.txtMainPath = new MetroFramework.Controls.MetroTextBox();
             this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
             this.btnOk = new MetroFramework.Controls.MetroButton();
             this.btnCancel = new MetroFramework.Controls.MetroButton();
             this.folderBrowserDialog1 = new System.Windows.Forms.FolderBrowserDialog();
-            this.listBox1 = new System.Windows.Forms.ListBox();
-            this.metroTextBox1 = new MetroFramework.Controls.MetroTextBox();
-            this.btnAddList = new MetroFramework.Controls.MetroButton();
-            this.metroLabel2 = new MetroFramework.Controls.MetroLabel();
             ((System.ComponentModel.ISupportInitialize)(this.metroStyleManager)).BeginInit();
             this.metroPanel1.SuspendLayout();
             this.SuspendLayout();
@@ -56,7 +56,7 @@ namespace FileExplorer
             // 
             this.metroPanel1.Controls.Add(this.metroLabel2);
             this.metroPanel1.Controls.Add(this.btnAddList);
-            this.metroPanel1.Controls.Add(this.metroTextBox1);
+            this.metroPanel1.Controls.Add(this.txtAdd);
             this.metroPanel1.Controls.Add(this.listBox1);
             this.metroPanel1.Controls.Add(this.btnSelDir);
             this.metroPanel1.Controls.Add(this.txtMainPath);
@@ -71,6 +71,52 @@ namespace FileExplorer
             this.metroPanel1.VerticalScrollbarBarColor = true;
             this.metroPanel1.VerticalScrollbarHighlightOnWheel = false;
             this.metroPanel1.VerticalScrollbarSize = 10;
+            // 
+            // metroLabel2
+            // 
+            this.metroLabel2.AutoSize = true;
+            this.metroLabel2.FontSize = MetroFramework.MetroLabelSize.Tall;
+            this.metroLabel2.FontWeight = MetroFramework.MetroLabelWeight.Bold;
+            this.metroLabel2.Location = new System.Drawing.Point(17, 92);
+            this.metroLabel2.Name = "metroLabel2";
+            this.metroLabel2.Size = new System.Drawing.Size(48, 25);
+            this.metroLabel2.TabIndex = 12;
+            this.metroLabel2.Text = "分组";
+            this.metroLabel2.Theme = MetroFramework.MetroThemeStyle.Light;
+            // 
+            // btnAddList
+            // 
+            this.btnAddList.FontSize = MetroFramework.MetroButtonSize.Tall;
+            this.btnAddList.Location = new System.Drawing.Point(263, 343);
+            this.btnAddList.Name = "btnAddList";
+            this.btnAddList.Size = new System.Drawing.Size(92, 25);
+            this.btnAddList.TabIndex = 11;
+            this.btnAddList.Text = "增加";
+            this.btnAddList.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.btnAddList.UseSelectable = true;
+            this.btnAddList.Click += new System.EventHandler(this.btnAddList_Click);
+            // 
+            // txtAdd
+            // 
+            this.txtAdd.Lines = new string[0];
+            this.txtAdd.Location = new System.Drawing.Point(17, 343);
+            this.txtAdd.MaxLength = 32767;
+            this.txtAdd.Name = "txtAdd";
+            this.txtAdd.PasswordChar = '\0';
+            this.txtAdd.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.txtAdd.SelectedText = "";
+            this.txtAdd.Size = new System.Drawing.Size(234, 23);
+            this.txtAdd.TabIndex = 10;
+            this.txtAdd.UseSelectable = true;
+            // 
+            // listBox1
+            // 
+            this.listBox1.FormattingEnabled = true;
+            this.listBox1.ItemHeight = 12;
+            this.listBox1.Location = new System.Drawing.Point(17, 129);
+            this.listBox1.Name = "listBox1";
+            this.listBox1.Size = new System.Drawing.Size(338, 208);
+            this.listBox1.TabIndex = 9;
             // 
             // btnSelDir
             // 
@@ -134,52 +180,6 @@ namespace FileExplorer
             this.btnCancel.UseSelectable = true;
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
-            // listBox1
-            // 
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.ItemHeight = 12;
-            this.listBox1.Location = new System.Drawing.Point(17, 129);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(338, 208);
-            this.listBox1.TabIndex = 9;
-            // 
-            // metroTextBox1
-            // 
-            this.metroTextBox1.Enabled = false;
-            this.metroTextBox1.Lines = new string[0];
-            this.metroTextBox1.Location = new System.Drawing.Point(17, 343);
-            this.metroTextBox1.MaxLength = 32767;
-            this.metroTextBox1.Name = "metroTextBox1";
-            this.metroTextBox1.PasswordChar = '\0';
-            this.metroTextBox1.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.metroTextBox1.SelectedText = "";
-            this.metroTextBox1.Size = new System.Drawing.Size(234, 23);
-            this.metroTextBox1.TabIndex = 10;
-            this.metroTextBox1.UseSelectable = true;
-            // 
-            // btnAddList
-            // 
-            this.btnAddList.FontSize = MetroFramework.MetroButtonSize.Tall;
-            this.btnAddList.Location = new System.Drawing.Point(263, 343);
-            this.btnAddList.Name = "btnAddList";
-            this.btnAddList.Size = new System.Drawing.Size(92, 25);
-            this.btnAddList.TabIndex = 11;
-            this.btnAddList.Text = "增加";
-            this.btnAddList.Theme = MetroFramework.MetroThemeStyle.Dark;
-            this.btnAddList.UseSelectable = true;
-            // 
-            // metroLabel2
-            // 
-            this.metroLabel2.AutoSize = true;
-            this.metroLabel2.FontSize = MetroFramework.MetroLabelSize.Tall;
-            this.metroLabel2.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.metroLabel2.Location = new System.Drawing.Point(17, 92);
-            this.metroLabel2.Name = "metroLabel2";
-            this.metroLabel2.Size = new System.Drawing.Size(48, 25);
-            this.metroLabel2.TabIndex = 12;
-            this.metroLabel2.Text = "分组";
-            this.metroLabel2.Theme = MetroFramework.MetroThemeStyle.Light;
-            // 
             // SettingsForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -214,7 +214,7 @@ namespace FileExplorer
         private MetroFramework.Controls.MetroButton btnSelDir;
         private System.Windows.Forms.FolderBrowserDialog folderBrowserDialog1;
         private MetroFramework.Controls.MetroButton btnAddList;
-        private MetroFramework.Controls.MetroTextBox metroTextBox1;
+        private MetroFramework.Controls.MetroTextBox txtAdd;
         private System.Windows.Forms.ListBox listBox1;
         private MetroFramework.Controls.MetroLabel metroLabel2;
     }
