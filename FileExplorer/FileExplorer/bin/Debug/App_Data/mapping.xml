@@ -1,35 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <root>
-  <mainPath>D:\backlog</mainPath>
+  <mainPath>e:\backlog</mainPath>
   <groups>
-    <item default="true">11</item>
-    <item>22</item>
+    <item default="true">默认分组</item>
   </groups>
-  <file>
-    <id>8b243775-8afc-4947-b5af-b6c37800c4d5</id>
-    <fileName>project-management-professional-pmp</fileName>
-    <filePath>D:\backlog\8b243775-8afc-4947-b5af-b6c37800c4d5.png</filePath>
-    <fileType>2</fileType>
-    <date>2018-03-01</date>
-    <group>22</group>
-    <extName>.png</extName>
-  </file>
-  <file>
-    <id>629f022e-81d3-4e0c-b2e4-f3f475e35b07</id>
-    <fileName>QQ图片20170327171502</fileName>
-    <filePath>D:\backlog\629f022e-81d3-4e0c-b2e4-f3f475e35b07.png</filePath>
-    <fileType>2</fileType>
-    <date>2018-03-01</date>
-    <group>22</group>
-    <extName>.png</extName>
-  </file>
-  <file>
-    <id>fb49e57e-e0e8-4209-b915-efec499c6755</id>
-    <fileName>大二班徽</fileName>
-    <filePath>D:\backlog\fb49e57e-e0e8-4209-b915-efec499c6755.png</filePath>
-    <fileType>2</fileType>
-    <date>2018-03-01</date>
-    <group>11</group>
-    <extName>.png</extName>
-  </file>
 </root>

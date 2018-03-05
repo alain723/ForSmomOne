@@ -91,6 +91,9 @@ namespace FileExplorer
                     }
 
                 }
+
+                //data.Where(x => data.Elements("groups").Select(y=>y.Value).Contains(x.Element("group"))).OrderByDescending(x => Convert.ToDateTime(x.Element("date").Value))
+
                 this.listView1.Groups.Add(lvg);
             }
 
@@ -155,6 +158,9 @@ namespace FileExplorer
             UpForm upForm = new UpForm();
             if (upForm.ShowDialog() == DialogResult.OK)
             {
+                groups = xDoc.Element("root").Element("groups").Elements("item").Select(x => x.Value);
+                files = xDoc.Element("root").Elements("file");
+                times = xDoc.Element("root").Elements("file").Select(x => x.Element("date").Value).Distinct();
                 if (this.rdbGroup.Checked)
                 {
                     BindData(groups, files);
@@ -165,11 +171,6 @@ namespace FileExplorer
                 }
             }
 
-        }
-
-        private void MainForm_Activated(object sender, EventArgs e)
-        {
-            //MainForm_Load(sender, e);
         }
 
         private void listView1_MouseDoubleClick(object sender, MouseEventArgs e)
@@ -234,6 +235,9 @@ namespace FileExplorer
             }
 
             xDoc.Save(XPath);
+            groups = xDoc.Element("root").Element("groups").Elements("item").Select(x => x.Value);
+            files = xDoc.Element("root").Elements("file");
+            times = xDoc.Element("root").Elements("file").Select(x => x.Element("date").Value).Distinct();
             if (this.rdbGroup.Checked)
             {
                 BindData(groups, files);
@@ -283,6 +287,7 @@ namespace FileExplorer
 
         private void rdbGroup_CheckedChanged(object sender, EventArgs e)
         {
+
             if (this.rdbGroup.Checked)
             {
                 BindData(groups, files);
@@ -332,7 +337,7 @@ namespace FileExplorer
         private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
         {
             this.txtSearch.Clear();
-            var data = xDoc.Element("root").Elements("file").Where(x => x.Element("date").Value==this.dateTimePicker1.Value.ToString("yyyy-MM-dd"));
+            var data = xDoc.Element("root").Elements("file").Where(x => x.Element("date").Value == this.dateTimePicker1.Value.ToString("yyyy-MM-dd"));
             var times = data.Elements("date").Select(x => x.Value).Distinct();
             this.rdbTime.Checked = true;
             BindData1(times, data);
@@ -341,7 +346,36 @@ namespace FileExplorer
         private void btnSetting_Click(object sender, EventArgs e)
         {
             LogHelper.WriteLog(this.GetType(), "设置");
-            new SettingsForm().ShowDialog();
+
+            if (new SettingsForm().ShowDialog() == DialogResult.OK)
+            {
+                groups = xDoc.Element("root").Element("groups").Elements("item").Select(x => x.Value);
+                files = xDoc.Element("root").Elements("file");
+                times = xDoc.Element("root").Elements("file").Select(x => x.Element("date").Value).Distinct();
+                if (this.rdbGroup.Checked)
+                {
+                    BindData(groups, files);
+                }
+                else
+                {
+                    BindData1(times, files);
+                }
+            }
+        }
+
+        private void 刷新ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            groups = xDoc.Element("root").Element("groups").Elements("item").Select(x => x.Value);
+            files = xDoc.Element("root").Elements("file");
+            times = xDoc.Element("root").Elements("file").Select(x => x.Element("date").Value).Distinct();
+            if (this.rdbGroup.Checked)
+            {
+                BindData(groups, files);
+            }
+            else
+            {
+                BindData1(times, files);
+            }
         }
     }
 }

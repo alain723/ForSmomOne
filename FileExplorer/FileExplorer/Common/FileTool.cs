@@ -59,6 +59,35 @@ namespace FileExplorer.Common
             return fi.CopyTo(to);
         }
 
+        public void CopyDirectory(string sourceDirPath, string saveDirPath)
+        {
+            try
+            {
+                if (!Directory.Exists(saveDirPath))
+                {
+                    Directory.CreateDirectory(saveDirPath);
+                }
+                string[] files = Directory.GetFiles(sourceDirPath);
+                foreach (string file in files)
+                {
+                    string pFilePath = saveDirPath + "\\" + Path.GetFileName(file);
+                    if (File.Exists(pFilePath))
+                        continue;
+                    File.Copy(file, pFilePath, true);
+                }
+
+                string[] dirs = Directory.GetDirectories(sourceDirPath);
+                foreach (string dir in dirs)
+                {
+                    CopyDirectory(dir, saveDirPath + "\\" + Path.GetFileName(dir));
+                }
+            }
+            catch (Exception e)
+            {
+                LogHelper.WriteLog(this.GetType(), "复制文件夹内容失败：\r\n" + e.Message + e.StackTrace);
+            }
+        }
+
         public static FileType GetFileType(string fileName)
         {
             //"图片|*.jgp;*.png;*.jpeg;*.bmp;*.gif|pdf文件|*.pdf|Word|*.doc;*.docx|Excel|*.xls;*.xlsx|所有文件(*.*)|*.*";

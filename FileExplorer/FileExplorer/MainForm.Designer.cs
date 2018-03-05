@@ -50,6 +50,7 @@ namespace FileExplorer
             this.delTsm = new System.Windows.Forms.ToolStripMenuItem();
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
+            this.刷新ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.metroStyleManager)).BeginInit();
             this.metroPanel1.SuspendLayout();
             this.contextMenuStrip1.SuspendLayout();
@@ -220,20 +221,21 @@ namespace FileExplorer
             // 
             this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.groCms,
-            this.delTsm});
+            this.delTsm,
+            this.刷新ToolStripMenuItem});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(101, 48);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(153, 92);
             // 
             // groCms
             // 
             this.groCms.Name = "groCms";
-            this.groCms.Size = new System.Drawing.Size(100, 22);
+            this.groCms.Size = new System.Drawing.Size(152, 22);
             this.groCms.Text = "分组";
             // 
             // delTsm
             // 
             this.delTsm.Name = "delTsm";
-            this.delTsm.Size = new System.Drawing.Size(100, 22);
+            this.delTsm.Size = new System.Drawing.Size(152, 22);
             this.delTsm.Text = "删除";
             this.delTsm.Click += new System.EventHandler(this.delTsm_Click);
             // 
@@ -246,6 +248,13 @@ namespace FileExplorer
             this.imageList1.Images.SetKeyName(2, "image.png");
             this.imageList1.Images.SetKeyName(3, "pdf.png");
             this.imageList1.Images.SetKeyName(4, "word.png");
+            // 
+            // 刷新ToolStripMenuItem
+            // 
+            this.刷新ToolStripMenuItem.Name = "刷新ToolStripMenuItem";
+            this.刷新ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.刷新ToolStripMenuItem.Text = "刷新";
+            this.刷新ToolStripMenuItem.Click += new System.EventHandler(this.刷新ToolStripMenuItem_Click);
             // 
             // MainForm
             // 
@@ -263,7 +272,6 @@ namespace FileExplorer
             this.ShadowType = MetroFramework.Forms.MetroFormShadowType.AeroShadow;
             this.StyleManager = this.metroStyleManager;
             this.Text = "文件管理器";
-            this.Activated += new System.EventHandler(this.MainForm_Activated);
             this.Load += new System.EventHandler(this.MainForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.metroStyleManager)).EndInit();
             this.metroPanel1.ResumeLayout(false);
@@ -293,6 +301,7 @@ namespace FileExplorer
         private MetroLabel metroLabel3;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
         private System.Windows.Forms.Button btnSetting;
+        private System.Windows.Forms.ToolStripMenuItem 刷新ToolStripMenuItem;
     }
 }
 

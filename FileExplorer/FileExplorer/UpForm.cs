@@ -99,7 +99,7 @@ namespace FileExplorer
                         FilePath = fi.FullName,
                         FileType = FileTool.GetFileType(fi.Extension),
                         Date = this.dateTimePicker1.Value,
-                        Group = "",
+                        Group = xDoc.Element("root").Element("groups").Elements("item").Where(x=>x.HasAttributes).SingleOrDefault().Value,
                         ExtName = fi.Extension
                     };
                     model.Date = this.dateTimePicker1.Value;

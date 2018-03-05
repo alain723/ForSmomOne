@@ -11,6 +11,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Xml.Linq;
+using static System.Windows.Forms.ListViewItem;
 
 namespace FileExplorer
 {
@@ -36,37 +37,50 @@ namespace FileExplorer
 
         private void btnOk_Click(object sender, EventArgs e)
         {
-            //保存xml
-
-
 
             //修改路径后
-            if (xDoc.Element("root").Element("mainPath").Value != this.txtMainPath.Text)
-            {
-                if (MetroFramework.MetroMessageBox.Show(this, "您已经改变备份路径，是否迁移文件到新路径？", "警告", MessageBoxButtons.OKCancel) == DialogResult.OK)
-                {
-                    //MessageBox.Show(this, "asd");
-                }
-            }
+
             this.DialogResult = DialogResult.OK;
         }
 
         private void SettingsForm_Load(object sender, EventArgs e)
         {
+            BindGroup();
+        }
+
+        private void BindGroup()
+        {
+            this.listView1.Items.Clear();
             this.txtMainPath.Text = xDoc.Element("root").Element("mainPath").Value;
             //this.listBox1.
             var listData = xDoc.Element("root").Element("groups").Elements("item");
+
+            this.listView1.BeginUpdate();
             foreach (var item in listData)
             {
+                int count = xDoc.Element("root").Elements("file").Count(x => x.Element("group")?.Value == item.Value);
                 if (item.HasAttributes)
                 {
-                    this.listBox1.Items.Add("默认分组    " + item.Value);
+
+                    //this.listBox1.Items.Add("默认分组    " + item.Value);
+                    ListViewItem lvi = new ListViewItem("✔");
+                    lvi.SubItems.Add(new ListViewSubItem(lvi, item.Value));
+                    lvi.SubItems.Add(new ListViewSubItem(lvi, count.ToString()));
+
+                    this.listView1.Items.Add(lvi);
                 }
                 else
                 {
-                    this.listBox1.Items.Add("            " + item.Value);
+                    //this.listBox1.Items.Add("            " + item.Value);
+
+                    ListViewItem lvi = new ListViewItem();
+                    lvi.SubItems.Add(new ListViewSubItem(lvi, item.Value));
+                    lvi.SubItems.Add(new ListViewSubItem(lvi, count.ToString()));
+
+                    this.listView1.Items.Add(lvi);
                 }
             }
+            this.listView1.EndUpdate();
         }
 
         private void btnSelDir_Click(object sender, EventArgs e)
@@ -74,6 +88,16 @@ namespace FileExplorer
             if (this.folderBrowserDialog1.ShowDialog() == DialogResult.OK)
             {
                 this.txtMainPath.Text = this.folderBrowserDialog1.SelectedPath;
+                if (xDoc.Element("root").Element("mainPath").Value != this.txtMainPath.Text)
+                {
+                    if (MetroFramework.MetroMessageBox.Show(this, "您已经改变备份路径，是否迁移文件到新路径？", "警告", MessageBoxButtons.OKCancel) == DialogResult.OK)
+                    {
+                        FileTool ft = new FileTool();
+                        ft.CopyDirectory(xDoc.Element("root").Element("mainPath").Value, this.txtMainPath.Text);
+                    }
+                }
+                xDoc.Element("root").Element("mainPath").Value = this.txtMainPath.Text;
+                xDoc.Save(XPath);
             }
         }
 
@@ -84,22 +108,79 @@ namespace FileExplorer
         /// <param name="e"></param>
         private void btnAddList_Click(object sender, EventArgs e)
         {
+
+            var listData = xDoc.Element("root").Element("groups");
             if (string.IsNullOrEmpty(this.txtAdd.Text))
             {
                 MetroFramework.MetroMessageBox.Show(this, "请在文本框输入分组名称", "警告");
                 return;
             }
-            if (this.listBox1.Items.Contains("默认分组    " + this.txtAdd.Text)|| this.listBox1.Items.Contains("            " + this.txtAdd.Text))
+            if (listData.Elements("item").Any(x => x.Value == this.txtAdd.Text))
             {
-                if (MetroFramework.MetroMessageBox.Show(this, "已经存在该分组，是否继续添加？", "警告", MessageBoxButtons.OKCancel) == DialogResult.Cancel)
+                MetroFramework.MetroMessageBox.Show(this, "已经存在该分组，请勿重复添加", "警告");
+
+                this.txtAdd.Clear();
+                return;
+
+
+            }
+
+            if (listData.Elements("item").Any())
+            {
+                listData.Add(new XElement("item", this.txtAdd.Text));
+            }
+            else
+            {
+                listData.Add(new XElement("item", this.txtAdd.Text, new XAttribute("default", "true")));
+            }
+
+            xDoc.Save(XPath);
+            BindGroup();
+            this.txtAdd.Clear();
+        }
+
+        private void listView1_MouseClick(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Right)
+            {
+                this.contextMenuStrip1.Show(listView1, e.Location);
+            }
+        }
+
+        private void 删除ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var listData = xDoc.Element("root").Element("groups").Elements("item");
+            foreach (ListViewItem item in this.listView1.SelectedItems)
+            {
+                if (Convert.ToInt32(item.SubItems[2].Text) > 0)
                 {
-                    this.txtAdd.Clear();
+                    MetroFramework.MetroMessageBox.Show(this, "改分组下还有文件，请先移动或删除", "警告");
                     return;
                 }
-                
+                item.Remove();
+                var ele = listData.SingleOrDefault(x => x.Value == item.SubItems[1].Text);
+                if (ele.HasAttributes)
+                {
+                    var shen = listData.Where(x => x.Value != item.SubItems[1].Text);
+                    if (shen.Any())
+                    {
+                        shen.First().Add(new XAttribute("default", "true"));
+                    }
+                }
+                ele.Remove();
             }
-            this.listBox1.Items.Add("            " + this.txtAdd.Text);
-            this.txtAdd.Clear();
+            xDoc.Save(XPath);
+            BindGroup();
+        }
+
+        private void 默认ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var listData = xDoc.Element("root").Element("groups").Elements("item");
+            listData.SingleOrDefault(x => x.HasAttributes).RemoveAttributes();
+            ListViewItem lvi = this.listView1.SelectedItems[0];
+            listData.SingleOrDefault(x => x.Value == lvi.SubItems[1].Text).Add(new XAttribute("default", "true"));
+            xDoc.Save(XPath);
+            BindGroup();
         }
     }
 }

@@ -102,3 +102,515 @@
 出错类：FileExplorer.MainForm property: [(null)] - 
 错误描述：双击打开文件---G:\Desktop\project-management-professional-pmp.png
  
+
+ 
+记录时间：2018-03-01 13:10:36,621 
+线程ID:[1] 
+日志级别：  ERROR 
+出错类：FileExplorer.UpForm property: [(null)] - 
+错误描述：选择文件---G:\Desktop\project-management-professional-pmp.png
+ 
+
+ 
+记录时间：2018-03-01 13:10:36,644 
+线程ID:[1] 
+日志级别：  ERROR 
+出错类：FileExplorer.UpForm property: [(null)] - 
+错误描述：选择文件---G:\Desktop\QQ图片20170327171502.png
+ 
+
+ 
+记录时间：2018-03-01 13:10:36,644 
+线程ID:[1] 
+日志级别：  ERROR 
+出错类：FileExplorer.UpForm property: [(null)] - 
+错误描述：选择文件---G:\Desktop\大二班徽.png
+ 
+
+ 
+记录时间：2018-03-01 13:10:36,644 
+线程ID:[1] 
+日志级别：  ERROR 
+出错类：FileExplorer.UpForm property: [(null)] - 
+错误描述：选择文件---G:\Desktop\轮子logo白色无文字.png
+ 
+
+ 
+记录时间：2018-03-01 13:10:36,645 
+线程ID:[1] 
+日志级别：  ERROR 
+出错类：FileExplorer.UpForm property: [(null)] - 
+错误描述：选择文件---G:\Desktop\未标题-1.png
+ 
+
+ 
+记录时间：2018-03-01 13:11:08,215 
+线程ID:[1] 
+日志级别：  ERROR 
+出错类：FileExplorer.MainForm property: [(null)] - 
+错误描述：双击打开文件---G:\Desktop\project-management-professional-pmp.png
+ 
+
+ 
+记录时间：2018-03-01 13:13:11,799 
+线程ID:[1] 
+日志级别：  ERROR 
+出错类：FileExplorer.UpForm property: [(null)] - 
+错误描述：选择文件---G:\Desktop\project-management-professional-pmp.png
+ 
+
+ 
+记录时间：2018-03-01 13:13:11,823 
+线程ID:[1] 
+日志级别：  ERROR 
+出错类：FileExplorer.UpForm property: [(null)] - 
+错误描述：选择文件---G:\Desktop\QQ图片20170327171502.png
+ 
+
+ 
+记录时间：2018-03-01 13:13:11,823 
+线程ID:[1] 
+日志级别：  ERROR 
+出错类：FileExplorer.UpForm property: [(null)] - 
+错误描述：选择文件---G:\Desktop\大二班徽.png
+ 
+
+ 
+记录时间：2018-03-01 13:13:11,824 
+线程ID:[1] 
+日志级别：  ERROR 
+出错类：FileExplorer.UpForm property: [(null)] - 
+错误描述：选择文件---G:\Desktop\轮子logo白色无文字.png
+ 
+
+ 
+记录时间：2018-03-01 13:13:11,824 
+线程ID:[1] 
+日志级别：  ERROR 
+出错类：FileExplorer.UpForm property: [(null)] - 
+错误描述：选择文件---G:\Desktop\未标题-1.png
+ 
+
+ 
+记录时间：2018-03-01 13:13:11,824 
+线程ID:[1] 
+日志级别：  ERROR 
+出错类：FileExplorer.UpForm property: [(null)] - 
+错误描述：选择文件---G:\Desktop\项目管理部logo无背景.png
+ 
+
+ 
+记录时间：2018-03-01 13:14:12,453 
+线程ID:[1] 
+日志级别：  ERROR 
+出错类：FileExplorer.UpForm property: [(null)] - 
+错误描述：选择文件---G:\Desktop\project-management-professional-pmp.png
+ 
+
+ 
+记录时间：2018-03-01 13:14:12,475 
+线程ID:[1] 
+日志级别：  ERROR 
+出错类：FileExplorer.UpForm property: [(null)] - 
+错误描述：选择文件---G:\Desktop\QQ图片20170327171502.png
+ 
+
+ 
+记录时间：2018-03-01 13:14:12,476 
+线程ID:[1] 
+日志级别：  ERROR 
+出错类：FileExplorer.UpForm property: [(null)] - 
+错误描述：选择文件---G:\Desktop\大二班徽.png
+ 
+
+ 
+记录时间：2018-03-01 13:14:12,476 
+线程ID:[1] 
+日志级别：  ERROR 
+出错类：FileExplorer.UpForm property: [(null)] - 
+错误描述：选择文件---G:\Desktop\轮子logo白色无文字.png
+ 
+
+ 
+记录时间：2018-03-01 13:14:12,476 
+线程ID:[1] 
+日志级别：  ERROR 
+出错类：FileExplorer.UpForm property: [(null)] - 
+错误描述：选择文件---G:\Desktop\未标题-1.png
+ 
+
+ 
+记录时间：2018-03-01 13:14:12,476 
+线程ID:[1] 
+日志级别：  ERROR 
+出错类：FileExplorer.UpForm property: [(null)] - 
+错误描述：选择文件---G:\Desktop\项目管理部logo无背景.png
+ 
+
+ 
+记录时间：2018-03-01 13:14:38,524 
+线程ID:[1] 
+日志级别：  ERROR 
+出错类：FileExplorer.UpForm property: [(null)] - 
+错误描述：选择文件---G:\Desktop\project-management-professional-pmp.png
+ 
+
+ 
+记录时间：2018-03-01 13:14:38,524 
+线程ID:[1] 
+日志级别：  ERROR 
+出错类：FileExplorer.UpForm property: [(null)] - 
+错误描述：选择文件---G:\Desktop\QQ图片20170327171502.png
+ 
+
+ 
+记录时间：2018-03-01 13:14:38,525 
+线程ID:[1] 
+日志级别：  ERROR 
+出错类：FileExplorer.UpForm property: [(null)] - 
+错误描述：选择文件---G:\Desktop\大二班徽.png
+ 
+
+ 
+记录时间：2018-03-01 13:14:38,525 
+线程ID:[1] 
+日志级别：  ERROR 
+出错类：FileExplorer.UpForm property: [(null)] - 
+错误描述：选择文件---G:\Desktop\轮子logo白色无文字.png
+ 
+
+ 
+记录时间：2018-03-01 13:14:38,525 
+线程ID:[1] 
+日志级别：  ERROR 
+出错类：FileExplorer.UpForm property: [(null)] - 
+错误描述：选择文件---G:\Desktop\未标题-1.png
+ 
+
+ 
+记录时间：2018-03-01 13:14:38,525 
+线程ID:[1] 
+日志级别：  ERROR 
+出错类：FileExplorer.UpForm property: [(null)] - 
+错误描述：选择文件---G:\Desktop\项目管理部logo无背景.png
+ 
+
+ 
+记录时间：2018-03-01 13:17:19,860 
+线程ID:[1] 
+日志级别：  ERROR 
+出错类：FileExplorer.MainForm property: [(null)] - 
+错误描述：删除文件---G:\Desktop\未标题-1.png
+ 
+
+ 
+记录时间：2018-03-01 13:17:28,291 
+线程ID:[1] 
+日志级别：  ERROR 
+出错类：FileExplorer.UpForm property: [(null)] - 
+错误描述：选择文件---G:\Desktop\project-management-professional-pmp.png
+ 
+
+ 
+记录时间：2018-03-01 13:17:33,496 
+线程ID:[1] 
+日志级别：  ERROR 
+出错类：FileExplorer.UpForm property: [(null)] - 
+错误描述：重复选择文件---G:\Desktop\project-management-professional-pmp.png
+ 
+
+ 
+记录时间：2018-03-01 13:17:33,496 
+线程ID:[1] 
+日志级别：  ERROR 
+出错类：FileExplorer.UpForm property: [(null)] - 
+错误描述：选择文件---G:\Desktop\QQ图片20170327171502.png
+ 
+
+ 
+记录时间：2018-03-01 13:17:33,497 
+线程ID:[1] 
+日志级别：  ERROR 
+出错类：FileExplorer.UpForm property: [(null)] - 
+错误描述：选择文件---G:\Desktop\大二班徽.png
+ 
+
+ 
+记录时间：2018-03-01 13:17:33,497 
+线程ID:[1] 
+日志级别：  ERROR 
+出错类：FileExplorer.UpForm property: [(null)] - 
+错误描述：选择文件---G:\Desktop\轮子logo白色无文字.png
+ 
+
+ 
+记录时间：2018-03-01 13:17:33,497 
+线程ID:[1] 
+日志级别：  ERROR 
+出错类：FileExplorer.UpForm property: [(null)] - 
+错误描述：选择文件---G:\Desktop\未标题-1.png
+ 
+
+ 
+记录时间：2018-03-01 13:17:33,497 
+线程ID:[1] 
+日志级别：  ERROR 
+出错类：FileExplorer.UpForm property: [(null)] - 
+错误描述：选择文件---G:\Desktop\项目管理部logo无背景.png
+ 
+
+ 
+记录时间：2018-03-01 13:21:37,677 
+线程ID:[1] 
+日志级别：  ERROR 
+出错类：FileExplorer.MainForm property: [(null)] - 
+错误描述：删除文件---G:\Desktop\项目管理部logo无背景.png
+ 
+
+ 
+记录时间：2018-03-01 13:29:28,036 
+线程ID:[1] 
+日志级别：  ERROR 
+出错类：FileExplorer.UpForm property: [(null)] - 
+错误描述：选择文件---G:\Desktop\大二班徽.png
+ 
+
+ 
+记录时间：2018-03-01 13:42:25,081 
+线程ID:[1] 
+日志级别：  ERROR 
+出错类：FileExplorer.UpForm property: [(null)] - 
+错误描述：选择文件---G:\Desktop\轮子logo白色无文字.png
+ 
+
+ 
+记录时间：2018-03-01 13:49:40,824 
+线程ID:[1] 
+日志级别：  ERROR 
+出错类：FileExplorer.UpForm property: [(null)] - 
+错误描述：选择文件---G:\Desktop\大二班徽.png
+ 
+
+ 
+记录时间：2018-03-01 13:49:54,789 
+线程ID:[1] 
+日志级别：  ERROR 
+出错类：FileExplorer.MainForm property: [(null)] - 
+错误描述：删除文件---G:\Desktop\project-management-professional-pmp.png
+ 
+
+ 
+记录时间：2018-03-01 13:49:54,790 
+线程ID:[1] 
+日志级别：  ERROR 
+出错类：FileExplorer.MainForm property: [(null)] - 
+错误描述：删除文件---G:\Desktop\QQ图片20170327171502.png
+ 
+
+ 
+记录时间：2018-03-01 13:49:54,792 
+线程ID:[1] 
+日志级别：  ERROR 
+出错类：FileExplorer.MainForm property: [(null)] - 
+错误描述：删除文件---G:\Desktop\大二班徽.png
+ 
+
+ 
+记录时间：2018-03-01 13:49:54,793 
+线程ID:[1] 
+日志级别：  ERROR 
+出错类：FileExplorer.MainForm property: [(null)] - 
+错误描述：删除文件---G:\Desktop\轮子logo白色无文字.png
+ 
+
+ 
+记录时间：2018-03-01 13:49:54,794 
+线程ID:[1] 
+日志级别：  ERROR 
+出错类：FileExplorer.MainForm property: [(null)] - 
+错误描述：删除文件---G:\Desktop\未标题-1.png
+ 
+
+ 
+记录时间：2018-03-01 13:49:54,795 
+线程ID:[1] 
+日志级别：  ERROR 
+出错类：FileExplorer.MainForm property: [(null)] - 
+错误描述：删除文件---G:\Desktop\项目管理部logo无背景.png
+ 
+
+ 
+记录时间：2018-03-01 13:49:59,595 
+线程ID:[1] 
+日志级别：  ERROR 
+出错类：FileExplorer.UpForm property: [(null)] - 
+错误描述：选择文件---G:\Desktop\轮子logo白色无文字.png
+ 
+
+ 
+记录时间：2018-03-01 13:56:52,723 
+线程ID:[1] 
+日志级别：  ERROR 
+出错类：FileExplorer.MainForm property: [(null)] - 
+错误描述：删除文件---G:\Desktop\project-management-professional-pmp.png
+ 
+
+ 
+记录时间：2018-03-01 13:56:52,763 
+线程ID:[1] 
+日志级别：  ERROR 
+出错类：FileExplorer.MainForm property: [(null)] - 
+错误描述：删除文件---G:\Desktop\QQ图片20170327171502.png
+ 
+
+ 
+记录时间：2018-03-01 13:56:52,764 
+线程ID:[1] 
+日志级别：  ERROR 
+出错类：FileExplorer.MainForm property: [(null)] - 
+错误描述：删除文件---G:\Desktop\大二班徽.png
+ 
+
+ 
+记录时间：2018-03-01 13:56:52,765 
+线程ID:[1] 
+日志级别：  ERROR 
+出错类：FileExplorer.MainForm property: [(null)] - 
+错误描述：删除文件---G:\Desktop\轮子logo白色无文字.png
+ 
+
+ 
+记录时间：2018-03-01 13:56:52,767 
+线程ID:[1] 
+日志级别：  ERROR 
+出错类：FileExplorer.MainForm property: [(null)] - 
+错误描述：删除文件---G:\Desktop\未标题-1.png
+ 
+
+ 
+记录时间：2018-03-01 13:56:52,768 
+线程ID:[1] 
+日志级别：  ERROR 
+出错类：FileExplorer.MainForm property: [(null)] - 
+错误描述：删除文件---G:\Desktop\项目管理部logo无背景.png
+ 
+
+ 
+记录时间：2018-03-01 13:56:57,526 
+线程ID:[1] 
+日志级别：  ERROR 
+出错类：FileExplorer.UpForm property: [(null)] - 
+错误描述：选择文件---G:\Desktop\project-management-professional-pmp.png
+ 
+
+ 
+记录时间：2018-03-01 13:57:19,299 
+线程ID:[1] 
+日志级别：  ERROR 
+出错类：FileExplorer.MainForm property: [(null)] - 
+错误描述：删除文件---G:\Desktop\project-management-professional-pmp.png
+ 
+
+ 
+记录时间：2018-03-01 13:57:19,301 
+线程ID:[1] 
+日志级别：  ERROR 
+出错类：FileExplorer.MainForm property: [(null)] - 
+错误描述：删除文件---G:\Desktop\QQ图片20170327171502.png
+ 
+
+ 
+记录时间：2018-03-01 13:57:19,305 
+线程ID:[1] 
+日志级别：  ERROR 
+出错类：FileExplorer.MainForm property: [(null)] - 
+错误描述：删除文件---G:\Desktop\大二班徽.png
+ 
+
+ 
+记录时间：2018-03-01 13:57:19,306 
+线程ID:[1] 
+日志级别：  ERROR 
+出错类：FileExplorer.MainForm property: [(null)] - 
+错误描述：删除文件---G:\Desktop\轮子logo白色无文字.png
+ 
+
+ 
+记录时间：2018-03-01 13:57:19,307 
+线程ID:[1] 
+日志级别：  ERROR 
+出错类：FileExplorer.MainForm property: [(null)] - 
+错误描述：删除文件---G:\Desktop\未标题-1.png
+ 
+
+ 
+记录时间：2018-03-01 13:57:19,308 
+线程ID:[1] 
+日志级别：  ERROR 
+出错类：FileExplorer.MainForm property: [(null)] - 
+错误描述：删除文件---G:\Desktop\项目管理部logo无背景.png
+ 
+
+ 
+记录时间：2018-03-01 13:57:24,355 
+线程ID:[1] 
+日志级别：  ERROR 
+出错类：FileExplorer.UpForm property: [(null)] - 
+错误描述：选择文件---G:\Desktop\轮子logo白色无文字.png
+ 
+
+ 
+记录时间：2018-03-01 13:57:58,308 
+线程ID:[1] 
+日志级别：  ERROR 
+出错类：FileExplorer.MainForm property: [(null)] - 
+错误描述：删除文件---G:\Desktop\轮子logo白色无文字.png
+ 
+
+ 
+记录时间：2018-03-01 14:43:35,892 
+线程ID:[1] 
+日志级别：  ERROR 
+出错类：FileExplorer.MainForm property: [(null)] - 
+错误描述：删除文件---D:\backlog\3d950280-825b-4dcb-9052-a4a36fb3fe13徽.png
+ 
+
+ 
+记录时间：2018-03-01 14:46:50,226 
+线程ID:[1] 
+日志级别：  ERROR 
+出错类：FileExplorer.MainForm property: [(null)] - 
+错误描述：删除文件---D:\backlog\d0a8aedf-fd1d-4df3-968b-51ee70a7892c.png
+ 
+
+ 
+记录时间：2018-03-01 14:46:51,396 
+线程ID:[1] 
+日志级别：  ERROR 
+出错类：FileExplorer.MainForm property: [(null)] - 
+错误描述：删除文件---D:\backlog\7404fd45-e72e-468b-a862-d055409e1240.png
+ 
+
+ 
+记录时间：2018-03-01 14:46:51,563 
+线程ID:[1] 
+日志级别：  ERROR 
+出错类：FileExplorer.MainForm property: [(null)] - 
+错误描述：删除文件---D:\backlog\05da2b2f-8c0a-43ed-a371-0cbb2f046091.png
+ 
+
+ 
+记录时间：2018-03-01 14:56:44,198 
+线程ID:[1] 
+日志级别：  ERROR 
+出错类：FileExplorer.MainForm property: [(null)] - 
+错误描述：双击打开文件---D:\backlog\fb49e57e-e0e8-4209-b915-efec499c6755.png
+ 
+
+ 
+记录时间：2018-03-01 16:10:44,185 
+线程ID:[1] 
+日志级别：  ERROR 
+出错类：FileExplorer.MainForm property: [(null)] - 
+错误描述：双击打开文件---D:\backlog\629f022e-81d3-4e0c-b2e4-f3f475e35b07.png
+ 

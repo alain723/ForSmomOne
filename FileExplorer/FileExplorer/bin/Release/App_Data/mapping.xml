@@ -1,7 +1,7 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <root>
-  <mainPath>Files</mainPath>
-  <fileGroup date="2018-01-8">
-    
-  </fileGroup>
+  <mainPath>e:\backlog</mainPath>
+  <groups>
+    <item default="true">默认分组</item>
+  </groups>
 </root>

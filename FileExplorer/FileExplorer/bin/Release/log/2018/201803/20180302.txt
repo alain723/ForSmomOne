@@ -1,0 +1,32 @@
+
+ 
+记录时间：2018-03-02 10:29:10,045 
+线程ID:[1] 
+日志级别：  ERROR 
+出错类：FileExplorer.MainForm property: [(null)] - 
+错误描述：设置
+ 
+
+ 
+记录时间：2018-03-02 10:37:24,611 
+线程ID:[1] 
+日志级别：  ERROR 
+出错类：FileExplorer.MainForm property: [(null)] - 
+错误描述：设置
+ 
+
+ 
+记录时间：2018-03-02 10:39:51,480 
+线程ID:[1] 
+日志级别：  ERROR 
+出错类：FileExplorer.MainForm property: [(null)] - 
+错误描述：设置
+ 
+
+ 
+记录时间：2018-03-02 10:55:33,885 
+线程ID:[1] 
+日志级别：  ERROR 
+出错类：FileExplorer.MainForm property: [(null)] - 
+错误描述：设置
+ 
